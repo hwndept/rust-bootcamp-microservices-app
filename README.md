@@ -12,11 +12,15 @@ The project implements the requirements defined in [bootcamp](https://github.com
 
 ```sh
 # To run auth service
+# The gRPC server will start listening 0.0.0.0:50051
 cargo run --bin auth
 
 # To run health check service
+# AUTH_SERVICE_HOST_NAME can be set if auth is running on a different server
 cargo run --bin health-check
 
-# TO run auth client
+# To run auth client
 cargo run --bin client
+# Add -h/--help to see all supported commands & arguments
+cargo run --bin client -- --help
 ```
